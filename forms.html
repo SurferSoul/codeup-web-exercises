@@ -5,13 +5,13 @@
     <title>Register With Us</title>
 </head>
 <body>
-    <form method="POST" action="https://www.elformo.com/forms/3d4822d6-245c-4d74-8269-d8af0343e683">
+    <form method="POST" action="https://request-inspector.glitch.me/">
         <label for="email">Type Your Email: </label>
-        <input type="email" name="email" id="email"/>
-        <br></p>
+        <input type="text" name="email" id="email" placeholder="Type Your Email Here..."/>
+        <br>
 
         <label for="password">Type Your Password: </label>
-        <input type="password" name="password" id="password"/>
+        <input type="password" name="password" id="password" placeholder="Enter your Password Here..."/>
         <br>
 
         <label for="Bio">Type your Bio here:</label>
@@ -19,16 +19,16 @@
         <textarea name="Bio" id="Bio" cols="40" rows="20"></textarea>
 
         <h3>How did you hear about us?</h3>
-        <input type="radio" name="Billboard" value="Billboard" id="Billboard"><label for="Billboard">billboard</label><br>
-        <input type="radio" name="internet" value="internet advertisement" id="internet advertisement"><label for="internet advertisement">internet advertising</label><br>
-        <input type="radio" name="radio" value="radio advertisement" id="radio advertisement"><label for="radio advertisement">radio advertisement</label><br>
-        <input type="radio" name="other" value="other" id="other"><label for="other">other</label></p>
+        <input type="checkbox" name="capture" value="Billboard" id="Billboard"><label for="Billboard">billboard</label><br>
+        <input type="checkbox" name="capture" value="internet advertisement" id="internet advertisement"><label for="internet advertisement">internet advertising</label><br>
+        <input type="checkbox" name="capture" value="radio advertisement" id="radio advertisement"><label for="radio advertisement">radio advertisement</label><br>
+        <input type="checkbox" name="capture" value="other" id="other"><label for="other">other</label></p>
 
         <h3>Which browser are you using?</h3>
-        <label for="dropdown">Select browser</label>
+        <label for="dropdown">Select browser:</label>
         <select name="dropdown" id="dropdown">
-            <option value="opera">Opera</option>
-            <option value="aol">america online</option>
+            <option value="edge">Microsoft Edge</option>
+            <option value="aol">America Online</option>
             <option value="chrome" selected="chrome">google chrome</option>
             <option value="safari">Safari</option>
         </select>
