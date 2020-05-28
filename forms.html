@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+<head>
+    <title>Register With Us</title>
 </head>
 <body>
-$END$
+    <form method="POST" action="https://www.elformo.com/forms/3d4822d6-245c-4d74-8269-d8af0343e683">
+        <label for="email">Type Your Email: </label>
+        <input type="email" name="email" id="email"/>
+        <br></p>
+
+        <label for="password">Type Your Password: </label>
+        <input type="password" name="password" id="password"/>
+        <br>
+
+        <label for="Bio">Type your Bio here:</label>
+        <br>
+        <textarea name="Bio" id="Bio" cols="40" rows="20"></textarea>
+
+        <h3>How did you hear about us?</h3>
+        <input type="radio" name="Billboard" value="Billboard" id="Billboard"><label for="Billboard">billboard</label><br>
+        <input type="radio" name="internet" value="internet advertisement" id="internet advertisement"><label for="internet advertisement">internet advertising</label><br>
+        <input type="radio" name="radio" value="radio advertisement" id="radio advertisement"><label for="radio advertisement">radio advertisement</label><br>
+        <input type="radio" name="other" value="other" id="other"><label for="other">other</label></p>
+
+        <h3>Which browser are you using?</h3>
+        <label for="dropdown">Select browser</label>
+        <select name="dropdown" id="dropdown">
+            <option value="opera">Opera</option>
+            <option value="aol">america online</option>
+            <option value="chrome" selected="chrome">google chrome</option>
+            <option value="safari">Safari</option>
+        </select>
+        <button type="Submit">Click to send form</button>
+    </form>
 </body>
 </html>
