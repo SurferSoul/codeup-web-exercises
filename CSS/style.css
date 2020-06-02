@@ -11,3 +11,6 @@ header {
     color: #2e4770;
 }
 
+html {
+    background-image: url("/Code/IMG/cssbackgroung.jpg");
+}
