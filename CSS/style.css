@@ -1,6 +1,6 @@
 /* Main Header */
 h1.fancy-header {
-    color: #3260a8; /* single line comment */
+    color: #2e4770; /* single line comment */
     text-decoration: underline;
     text-align: center;
 }
@@ -8,9 +8,45 @@ h1.fancy-header {
 header {
     text-align: center;
     text-decoration: underline;
-    color: #2e4770;
+    color: #3260a8;
 }
 
 html {
-    background-image: url("/Code/IMG/cssbackgroung.jpg");
+    background-image: url("https://images.unsplash.com/photo-1533387520709-752d83de3630?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+    background-repeat: repeat;
+
+}
+/*Document header*/
+h2 {
+    color: #2e4770;
+}
+
+h2.Product {
+    color: aliceblue;
+}
+
+li {
+    color: #3260a8;
+}
+
+
+/*Table*/
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 30%;
+    color: aliceblue;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+em {
+    color: #2e4770;
+}
+.guarantee {
+    color: #3260a8;
 }
