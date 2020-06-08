@@ -13,7 +13,7 @@ header {
 
 html {
     background-image: url("https://images.unsplash.com/photo-1533387520709-752d83de3630?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
-    background-repeat: repeat;
+    background-size: cover;
 
 }
 /*Document header*/
@@ -44,9 +44,14 @@ td, th {
     padding: 8px;
 }
 
+tr:nth-child(even) {
+    background-color: #848487;
+}
+
 em {
     color: #2e4770;
 }
 .guarantee {
     color: #3260a8;
 }
+
