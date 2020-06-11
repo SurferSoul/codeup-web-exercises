@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Pizza World</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!--CSS file-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Your custom css styles go here -->
+</head>
+<body>
+<!-- Main page content -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Pizza World</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Order Online</a>
+            </li>
+            <li class="nav-item mx-3">
+                <a class="nav-link" href="#">Menu</a>
+            </li>
+            <li>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="submit">Search stores near you!</button>
+                </form>
+            </li>
+        </ul>
+        <img src="./cover/user_img.png" width="30" height="30" alt="user_image">
+        <a class="nav-link" href="#">Sing up</a>
+    </div>
+</nav>
+
+<!--Jumbotron-->
+<div class="jumbotron px-0 text-center">
+    <h1 class="display-5 text-uppercase text-monospace font-weight-bold">Welcome to Pizza World!</h1>
+</div>
+
+<!--Nav Tags-->
+<h2 class="ml-4 pt-0 pb-0 bg-transparent .nav-tabs">Build your own pizza!</h2>
+<ul class="nav nav-tabs" id="tabNav">
+    <li class="nav-item">
+        <a class="nav-link active" href="#panel1"><span class="badge badge-pill badge-secondary mr-1">1</span>Size and
+            crust</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#panel2"><span class="badge badge-pill badge-secondary mr-1">2</span>Cheese and
+            crust</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#panel3"><span class="badge badge-pill badge-secondary mr-1">3</span>Toppings</a>
+    </li>
+</ul>
+
+<!--Panel #1-->
+<div class="tab-content">
+<div class="card p-4 tab-pane" id="panel1">
+    <!--Card # 1-->
+    <div class="card-header px-3 bg-primary text-white">Choose size and crust</div>
+
+    <div class="card card-header" style="width: auto;">Hand tossed</div>
+
+    <div class="list-group-item">
+        <div class="list-group list-group-flush">Garlic seasoned crust, with a rich buttery taste.</div>
+    </div>
+
+    <div class="list-group-item">
+        <input class="form-check-input ml-1" type="radio" name="exampleRadios" id="exampleRadios1"
+               value="option1">
+        <label class="form-check-label pl-3 ml-1" for="exampleRadios1">Small (10")</label>
+    </div>
+
+    <div class="list-group-item mb-4">
+        <input class="form-check-input ml-1" type="radio" name="exampleRadios" id="exampleRadios1" value="option2">
+        <label class="form-check-label pl-3 ml-1" for="exampleRadios1">Medium (12")</label>
+    </div>
+
+    <!--Card #2-->
+    <div class="card card-header" style="width: auto;">Crispy thin</div>
+
+    <div class="list-group-item">
+        <div class="list-group list-group-flush">Thin enough for optimum crispy, crunchy ratio.</div>
+    </div>
+
+    <div class="list-group-item">
+        <input class="form-check-input ml-1" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+        <label class="form-check-label pl-3 ml-1" for="exampleRadios1">Medium (12")</label>
+    </div>
+
+    <div class="list-group-item">
+        <input class="form-check-input ml-1" type="radio" name="exampleRadios" id="exampleRadios1" value="option2">
+        <label class="form-check-label pl-3 ml-1" for="exampleRadios1">Large (14")</label>
+    </div>
+    <!--Card Footer-->
+    <footer>
+        <div class="card mt-4">
+            <div class="card-footer text-right">
+                <a href="#" class="btn btn-primary">Next step ></a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+<!--Panel #2-->
+<div class="card p-4 tab-pane" id="panel2">
+    <!--Card #1-->
+    <div class="card-header px-3 bg-primary text-white">Cheese and sauce</div>
+    <div class="card card-header" style="width: auto;">Cheese</div>
+    <div class="list-group-item">
+        <label for="exampleFormControlSelect1">How much?</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+            <option>Light</option>
+            <option>Normal</option>
+            <option>Extra</option>
+            <option>Double</option>
+        </select>
+    </div>
+
+    <!--Card #2-->
+    <div class="card card-header mt-3" style="width: auto;">Sauce</div>
+    <div class="list-group-item">
+        <label for="exampleFormControlSelect1">What type?</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+            <option>Tomato sauce</option>
+            <option>Marinara sauce</option>
+            <option>BBQ Sauce</option>
+            <option>Alfredo Sauce</option>
+        </select>
+    </div>
+
+    <div class="list-group-item">
+        <label for="exampleFormControlSelect1">How much?</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+            <option>Light</option>
+            <option>Normal</option>
+            <option>Extra</option>
+        </select>
+    </div>
+    <footer>
+        <div class="btn-group text-justify" role="group" aria-label="Basic example">
+            <div class="card-footer text-right">
+                <button href="#" class="btn btn-primary">< Previous Step</button>
+                <button href="#" class="btn btn-primary">Next Step ></button>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+<!--Panel #3-->
+<div class="card p-4 tab-pane" id="panel3">
+    <!--Card #1-->
+    <div class="card-header px-3 bg-primary text-white">Choose toppings</div>
+
+    <div class="card card-header" style="width: auto;">Choose meat</div>
+
+    <div class="list-group-item">
+        <input class="form-check-input ml-1" type="checkbox" name="exampleRadios" id="exampleRadios1"
+               value="option1">
+        <label class="form-check-label pl-3 ml-1" for="exampleRadios1">Small (10")</label>
+    </div>
+
+    <div class="list-group-item mb-4">
+        <input class="form-check-input ml-1" type="checkbox" name="exampleRadios" id="exampleRadios1" value="option2">
+        <label class="form-check-label pl-3 ml-1" for="exampleRadios1">Medium (12")</label>
+    </div>
+
+    <!--Card #2-->
+    <div class="card card-header" style="width: auto;">Choose non-meat</div>
+
+    <div class="list-group-item">
+        <input class="form-check-input ml-1" type="checkbox" name="exampleRadios" id="exampleRadios1" value="option1">
+        <label class="form-check-label pl-3 ml-1" for="exampleRadios1">Medium (12")</label>
+    </div>
+
+    <div class="list-group-item">
+        <input class="form-check-input ml-1" type="checkbox" name="exampleRadios" id="exampleRadios1" value="option2">
+        <label class="form-check-label pl-3 ml-1" for="exampleRadios1">Large (14")</label>
+    </div>
+</div>
+
+<footer>
+    <div class="card mt-4">
+        <div class="card-footer text-right">
+            <a href="#" class="btn btn-primary">Check out</a>
+        </div>
+    </div>
+</footer>
+</div>
+<!-- Your custom JS goes here -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+<script>$('#tabNav a').on('click', function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+})
+</script>
+
+</body>
+
+</html>
