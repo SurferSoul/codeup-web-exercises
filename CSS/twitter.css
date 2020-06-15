@@ -109,7 +109,6 @@ a {
     border-bottom: 1px solid var(--separator-color);
     padding: .5em;
     overflow: auto;
-
 }
 .media-image {
     width: 50px;
