@@ -21,8 +21,9 @@ sayHello();
  *
  * console.log 'helloMessage' to check your work
  */
-let helloMessage = sayHello();
-    console.log(helloMessage);
+
+let helloMessage = sayHello("Woohoo!");
+console.log(helloMessage);
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
@@ -52,12 +53,16 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-function isTwo(num) {
-    if (num === 2) {
-        return (true);
-    } else {
-        return (false);
-    }
+// function isTwo(num) {
+//     if (num === 2) {
+//         return (true);
+//     } else {
+//         return (false);
+//     }
+// }
+// console.log(isTwo(random));
+const isTwo = function (num) {
+    return num === 2;
 }
 console.log(isTwo(random));
 /**
@@ -71,10 +76,15 @@ console.log(isTwo(random));
  * > calculateTip(0.25, 25.50) // returns 6.37
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
+function sum(tip, total) {
+    let myTotal = ((tip/100) * total);
+    return myTotal;
+}
+let tip = 25;
+let total = 25.50;
+let totalAmount = sum(tip, total);
+console.log(totalAmount);
 
-//
-// }
-//
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
@@ -82,8 +92,8 @@ console.log(isTwo(random));
  * then display the dollar amount they should tip
  */
 function calculateTip(tip,total) {
-    let myTip = parseInt(prompt("Please enter tip %"));
-    let totalWithoutTip = parseInt(prompt("What is the total?"));
+    let myTip = parseFloat(prompt("Please enter tip %"));
+    let totalWithoutTip = parseFloat(prompt("What is the total?"));
     let totalWithTip = ((totalWithoutTip * myTip) / 100) + totalWithoutTip;
     alert("Your total is $" + totalWithTip);
 }
