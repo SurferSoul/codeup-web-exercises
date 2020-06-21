@@ -96,8 +96,6 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-
-
 // let userColor = prompt("Please pick a color")
 //   function analyzeColor(userColor) {
 //   }
@@ -130,36 +128,42 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-// function sum(tip, total) {
-//     let myTotal = ((tip/100) * total);
-//     return myTotal;
-// }
-// let tip = 25;
-// let total = 25.50;
-// let totalAmount = sum(tip, total);
-// console.log(totalAmount);
 
 
+ function calculateTotal(luckyNumber, totalAmount) {
+    let Number = Math.floor(Math.random() * 5)
+    let total1 = totalAmount - (totalAmount *.10);
+    let total2 = totalAmount - (totalAmount *.25);
+    let total3 = totalAmount - (totalAmount *.35);
+    let total4 = totalAmount - (totalAmount *.50);
 
-function calculateTotal(num, total){
-    let discount = (total * (num))
-    if ( num === 0) {
-        return ("No discount")
-    } else if (num === 1) {
-        return((total * .10) + total)
-    } else if (num === 2) {
-        return((total * .25) + total)
-    } else if (num === 3) {
-        return((total * .35) + total)
-    } else if (num === 4) {
-        return((total * .50) + total)
-    } else if (num === 5) {
-        return ("you'll get all for free!.")
-}
-}
-let num = prompt("Please pick a number from one to 5")
-let total = prompt("Please enter a total amount")
-console.log(calculateTotal())
+     switch (Number) {
+
+         case 0:
+             console.log("You got no discount your total is $" + totalAmount.toFixed(2));
+             break;
+         case 1:
+             console.log("You got 10% discount! Your total is $" + total1.toFixed(2))
+             break;
+         case 2:
+             console.log("You got 25% discount! Your total is $" + total2.toFixed(2));
+             break;
+         case 3:
+             console.log("You got 35% discount! Your total is $" + total3.toFixed(2));
+             break;
+         case 4:
+             console.log("You got 50% discount! Your total is $" + total4.toFixed(2));
+             break;
+         case 5:
+             console.log("You'll get all for free!");
+             break;
+         default:
+             console.log("That is not a number")
+     }
+ }
+ console.log(calculateTotal(Number, 100));
+
+
 
 /**
  * TODO:
@@ -169,7 +173,45 @@ console.log(calculateTotal())
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+//  function calculateTotal(luckyNumber, totalBill) {
+//      //Local Variables
+//
+//      totalBill = parseInt(prompt("What is you total bill?"));
+//      luckyNumber = Math.floor(Math.random() * 6);
+//      let total1 = totalBill - (totalBill *.10);
+//      let total2 = totalBill - (totalBill *.25);
+//      let total3 = totalBill - (totalBill *.35);
+//      let total4 = totalBill - (totalBill *.50);
+//
+//      switch (luckyNumber) {
+//          case 0:
+//              alert("Your lucky number was " + luckyNumber + ", sorry you got no discount, your total bill is $" +
+//                   + totalBill.toFixed() + ".")
+//              break;
+//          case 1:
+//              alert("Your lucky number was " + luckyNumber + ", your total bill before discount was $" + totalBill.toFixed(2) + " ," +
+//                  " your new price including the discount is $" + total1.toFixed(2));
+//              break;
+//          case 2:
+//              alert("Your lucky number was " + luckyNumber + ", your total bill before discount was $" + totalBill.toFixed(2) + " ," +
+//                  " your new price including the discount is $" + total2.toFixed(2));
+//              break;
+//          case 3:
+//              alert("Your lucky number was " + luckyNumber + ", your total bill before discount was $" + totalBill.toFixed(2) + " ," +
+//                  " your new price including the discount is $" + total3.toFixed(2));
+//              break;
+//          case 4:
+//              alert("Your lucky number was " + luckyNumber + ", your total bill before discount was $" + totalBill.toFixed(2) + " ," +
+//                  " your new price including the discount is $" + total4.toFixed(2));
+//              break;
+//          case 5:
+//              alert("Your lucky number was " + luckyNumber + ", your total bill before discount was $" + totalBill.toFixed(2) + " ," +
+//                  " your new price including the discount is $0.00!!!");
+//              break;
+//      }
+//  }
+// calculateTotal();
+
 
 /**
  * TODO:
@@ -187,3 +229,35 @@ console.log(calculateTotal())
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+// function myConfirmFunc() {
+//     //Confirm yes/no Pop-up
+//     let number = (confirm("Do you want to enter a number?"));
+//     let numPrompt;
+//     let evenNum;
+//         //First Alert
+//     if (number) {
+//         numPrompt = parseInt(prompt("Please enter a number"));
+//     } if (numPrompt % 2 === 0) {
+//         alert(numPrompt + " is even");
+//         } else {
+//         alert(numPrompt + " is odd");
+//
+//         //Second Alert
+//     } if (number) {
+//         //had to insert the variable here because it was reading it as NaN
+//         let total = numPrompt + 100;
+//         alert("Your number + 100 is " + total);
+//
+//         //Third Alert
+//     } if (numPrompt >= 0) {
+//         alert(numPrompt + " is a positive number");
+//     } else {
+//         alert(numPrompt + " is a negative number");
+//     }
+// }
+// myConfirmFunc();
+
+
+
+
