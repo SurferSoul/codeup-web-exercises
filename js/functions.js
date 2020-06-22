@@ -22,7 +22,7 @@ sayHello();
  * console.log 'helloMessage' to check your work
  */
 
-let helloMessage = sayHello("Woohoo!");
+let helloMessage = sayHello("Ferdinand!");
 console.log(helloMessage);
 /**
  * TODO:
@@ -50,7 +50,7 @@ var random = Math.floor((Math.random() * 3) + 1);
  * Call the function 'isTwo' passing the variable 'random' as a argument.
  *
  * console.log *outside of the function* to check your work (you should see a
- * different result everytime you refresh the page if you are using the random
+ * different result every time you refresh the page if you are using the random
  * number)
  */
 // function isTwo(num) {
@@ -80,9 +80,9 @@ function sum(tip, total) {
     let myTotal = ((tip/100) * total);
     return myTotal;
 }
-let tip = 25;
-let total = 25.50;
-let totalAmount = sum(tip, total);
+let tip;
+let total;
+let totalAmount = sum(20,  10);
 console.log(totalAmount);
 
 /**
@@ -108,8 +108,15 @@ calculateTip();
 //  *
 //  * Example:
 //  * > var originalPrice = 100;
-//  * > var dicountPercent = .2; // 20%
-//  * > applyDiscount(originalPrice, dicountPercent) // 80
+//  * > var discountPercent = .2; // 20%
+//  * > applyDiscount(originalPrice, discountPercent) // 80
 //  *
 //  * > applyDiscount(45.99, 0.12) // 40.4712
 //  */
+function applyDiscount(originalPrice, discountPercent) {
+    let price = 100;
+    let discount = .2;
+    let totalPrice = price - (price * discount) ;
+    return totalPrice;
+}
+console.log(applyDiscount(10, .20));
