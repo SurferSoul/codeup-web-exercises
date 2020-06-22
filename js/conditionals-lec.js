@@ -178,13 +178,44 @@
 
 //TODO: Write a function that accepts a string that is a traffic light color as an input. When this function is called, it should return a message informing the user what to do when approaching that color light at an intersection.
 
-
+// function trafficLights(lightColor) {
+//
+//     if (lightColor === "red") {
+//         return ("Please stop!");
+//     } else if (lightColor === "yellow") {
+//         return ("Prepare to stop");
+//     } else if (lightColor === "green") {
+//         return ("Please proceed")
+//     }
+//     else {
+//         return ("Please enter a valid color");
+//     }
+// }
+// console.log(trafficLights("green"));
 
 
 // ================ NESTED STATEMENTS ===============
-//TODO Together: If user is under 15, they are not eligible for a learners permit, else they are. If they are eligible, check age. If they are 15 they are eligible for a learners permit, if they are 16 or older and have a permit, they are eligible for license, if they are 16 or older and do not have a permit, they are not eligble for a license.
+//TODO Together: 1. If user is under 15, they are not eligible for a learners permit, else they are.
+// If they are eligible, check age. If they are 15 they are eligible for a learners permit, if they are 16 or older
+// and have a permit, they are eligible for license, if they are 16 or older and do not have a permit, they are not eligble for a license.
+function driverLic(age){
+let permit;
 
-
+    if (age < 15) {
+        return ("Not eligible for learners permit.")
+    } else {
+    } let ageVer = parseInt(prompt ("Please enter your age:"));
+        if ( ageVer >= 16) {
+            permit = prompt("Do you have a learners permit?")
+        } else {
+                alert("You need to be 16 to get your license.")
+        } if (permit = true) {
+        alert("You can have your drivers license.")
+        }  else {
+            alert("You can't have a drivers license until you get your learners permit.");
+        }
+}
+console.log(driverLic(15));
 
 
 
@@ -239,40 +270,40 @@
 
 
 //TODO: Write a switch statement that evaluates weather as the condition. Check for "rainy", "sunny", "snow", and a default case.
-let weather = "snow";
-
-switch(weather) {
-    case "rainy":
-        console.log("It is raining");
-        break;
-    case "sunny":
-        console.log("It is sunny");
-        break;
-    case "snow":
-        console.log("It is snowing")
-        break;
-    default:
-        console.log("Check the weather");
-}
+// let weather = "snow";
+//
+// switch(weather) {
+//     case "rainy":
+//         console.log("It is raining");
+//         break;
+//     case "sunny":
+//         console.log("It is sunny");
+//         break;
+//     case "snow":
+//         console.log("It is snowing")
+//         break;
+//     default:
+//         console.log("Check the weather");
+// }
 
 
 
 //TODO: Rewrite the intersection function from earlier as a switch statement.
-let trafficLight = "red";
-
-switch (trafficLight) {
-    case "red":
-        console.log("Please Stop!");
-        break;
-    case "yellow":
-        console.log("Be ready to stop");
-        break;
-    case "green":
-        console.log("Proceed")
-        break;
-    default:
-        console.log("Please enter a traffic light color: green, yellow or red");
-}
+// let trafficLight = "red";
+//
+// switch (trafficLight) {
+//     case "red":
+//         console.log("Please Stop!");
+//         break;
+//     case "yellow":
+//         console.log("Be ready to stop");
+//         break;
+//     case "green":
+//         console.log("Proceed")
+//         break;
+//     default:
+//         console.log("Please enter a traffic light color: green, yellow or red");
+// }
 
 // ================ REVERSE ENGINEERING =================
 // Visit each of these links; outline the steps required to achieve each of these demonstrations. You can write code or just write the logic steps that would achieve each output
