@@ -173,44 +173,44 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-//  function calculateTotal(luckyNumber, totalBill) {
-//      //Local Variables
-//
-//      totalBill = parseInt(prompt("What is you total bill?"));
-//      luckyNumber = Math.floor(Math.random() * 6);
-//      let total1 = totalBill - (totalBill *.10);
-//      let total2 = totalBill - (totalBill *.25);
-//      let total3 = totalBill - (totalBill *.35);
-//      let total4 = totalBill - (totalBill *.50);
-//
-//      switch (luckyNumber) {
-//          case 0:
-//              alert("Your lucky number was " + luckyNumber + ", sorry you got no discount, your total bill is $" +
-//                   + totalBill.toFixed() + ".")
-//              break;
-//          case 1:
-//              alert("Your lucky number was " + luckyNumber + ", your total bill before discount was $" + totalBill.toFixed(2) + " ," +
-//                  " your new price including the discount is $" + total1.toFixed(2));
-//              break;
-//          case 2:
-//              alert("Your lucky number was " + luckyNumber + ", your total bill before discount was $" + totalBill.toFixed(2) + " ," +
-//                  " your new price including the discount is $" + total2.toFixed(2));
-//              break;
-//          case 3:
-//              alert("Your lucky number was " + luckyNumber + ", your total bill before discount was $" + totalBill.toFixed(2) + " ," +
-//                  " your new price including the discount is $" + total3.toFixed(2));
-//              break;
-//          case 4:
-//              alert("Your lucky number was " + luckyNumber + ", your total bill before discount was $" + totalBill.toFixed(2) + " ," +
-//                  " your new price including the discount is $" + total4.toFixed(2));
-//              break;
-//          case 5:
-//              alert("Your lucky number was " + luckyNumber + ", your total bill before discount was $" + totalBill.toFixed(2) + " ," +
-//                  " your new price including the discount is $0.00!!!");
-//              break;
-//      }
-//  }
-// calculateTotal();
+ function calculateTotal(luckyNumber, totalBill) {
+     //Local Variables
+
+     totalBill = parseInt(prompt("What is you total bill?"));
+     luckyNumber = Math.floor(Math.random() * 6);
+     let total1 = totalBill - (totalBill *.10);
+     let total2 = totalBill - (totalBill *.25);
+     let total3 = totalBill - (totalBill *.35);
+     let total4 = totalBill - (totalBill *.50);
+
+     switch (luckyNumber) {
+         case 0:
+             alert("Your lucky number was " + luckyNumber + ", sorry you got no discount, your total bill is $" +
+                  + totalBill.toFixed() + ".")
+             break;
+         case 1:
+             alert("Your lucky number was " + luckyNumber + ", your total bill before discount was $" + totalBill.toFixed(2) + " ," +
+                 " your new price including the discount is $" + total1.toFixed(2));
+             break;
+         case 2:
+             alert("Your lucky number was " + luckyNumber + ", your total bill before discount was $" + totalBill.toFixed(2) + " ," +
+                 " your new price including the discount is $" + total2.toFixed(2));
+             break;
+         case 3:
+             alert("Your lucky number was " + luckyNumber + ", your total bill before discount was $" + totalBill.toFixed(2) + " ," +
+                 " your new price including the discount is $" + total3.toFixed(2));
+             break;
+         case 4:
+             alert("Your lucky number was " + luckyNumber + ", your total bill before discount was $" + totalBill.toFixed(2) + " ," +
+                 " your new price including the discount is $" + total4.toFixed(2));
+             break;
+         case 5:
+             alert("Your lucky number was " + luckyNumber + ", your total bill before discount was $" + totalBill.toFixed(2) + " ," +
+                 " your new price including the discount is $0.00!!!");
+             break;
+     }
+ }
+calculateTotal();
 
 
 /**
@@ -230,33 +230,33 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * HINT: The way we prompt for a value could be improved
  */
 
-// function myConfirmFunc() {
-//     //Confirm yes/no Pop-up
-//     let number = (confirm("Do you want to enter a number?"));
-//     let numPrompt;
-//     let evenNum;
-//         //First Alert
-//     if (number) {
-//         numPrompt = parseInt(prompt("Please enter a number"));
-//     } if (numPrompt % 2 === 0) {
-//         alert(numPrompt + " is even");
-//         } else {
-//         alert(numPrompt + " is odd");
-//
-//         //Second Alert
-//     } if (number) {
-//         //had to insert the variable here because it was reading it as NaN
-//         let total = numPrompt + 100;
-//         alert("Your number + 100 is " + total);
-//
-//         //Third Alert
-//     } if (numPrompt >= 0) {
-//         alert(numPrompt + " is a positive number");
-//     } else {
-//         alert(numPrompt + " is a negative number");
-//     }
-// }
-// myConfirmFunc();
+function myConfirmFunc() {
+    //Confirm yes/no Pop-up
+    let number = (confirm("Do you want to enter a number?"));
+    let numPrompt;
+    let evenNum;
+        //First Alert
+    if (number) {
+        numPrompt = parseInt(prompt("Please enter a number"));
+    } if (numPrompt % 2 === 0) {
+        alert(numPrompt + " is even");
+        } else {
+        alert(numPrompt + " is odd");
+
+        //Second Alert
+    } if (number) {
+        //had to insert the variable here because it was reading it as NaN
+        let total = numPrompt + 100;
+        alert("Your number + 100 is " + total);
+
+        //Third Alert
+    } if (numPrompt >= 0) {
+        alert(numPrompt + " is a positive number");
+    } else {
+        alert(numPrompt + " is a negative number");
+    }
+}
+myConfirmFunc();
 
 
 
