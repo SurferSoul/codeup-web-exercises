@@ -199,15 +199,14 @@
 // If they are eligible, check age. If they are 15 they are eligible for a learners permit, if they are 16 or older
 // and have a permit, they are eligible for license, if they are 16 or older and do not have a permit, they are not eligble for a license.
 function driverLic(age){
-let permit;
+    let permit = prompt("Do you have a learners permit?")
+    let ageVer = parseInt(prompt ("Please enter your age:"));
 
     if (age < 15) {
         return ("Not eligible for learners permit.")
-    } else {
-    } let ageVer = parseInt(prompt ("Please enter your age:"));
-        if ( ageVer >= 16) {
-            permit = prompt("Do you have a learners permit?")
-        } else {
+    }  else if (ageVer >= 16 && permit) {
+
+
                 alert("You need to be 16 to get your license.")
         } if (permit = true) {
         alert("You can have your drivers license.")

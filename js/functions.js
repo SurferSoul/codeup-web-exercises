@@ -114,7 +114,7 @@ calculateTip();
 //  * > applyDiscount(45.99, 0.12) // 40.4712
 //  */
 function applyDiscount(originalPrice, discountPercent) {
-    let price = 100;
+    let price = 200;
     let discount = .2;
     let totalPrice = price - (price * discount) ;
     return totalPrice;
