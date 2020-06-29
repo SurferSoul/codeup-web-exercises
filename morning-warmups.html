@@ -6,28 +6,56 @@
 </head>
 <body>
     <script>
-        //June 22nd
-        function magicBall(number) {
-            switch(number) {
-                case 1:
-                    return ("As I see it, yes"
-                case 2:
-                    return ("Ask again later")
-                case 3:
-                    return ("Better not tell you now")
-                case 4:
-                    return ("Cannot predict now")
-                case 5:
-                    return ("Concentrate and ask again")
-                case 6:
-                    return ("Don't count on it")
-                case 7:
-                    return ("Outlook not so good")
-                case 8:
-                    return ("Outlook good")
-            }
+        let lights = "true"
+        let lightsOn = function() {
+            lights = !lights;
         }
-        magicBall(3);
+        console.log("The lights are " + lights);
+        lightsOn()
+        console.log("The lights are " + lights);
+        lightsOn()
+        console.log("The lights are " + lights);
+        lightsOn()
+        console.log("The lights are " + lights);
+        //
+        // let lightsOn = function() {
+        //     if (lights) {
+        //         lights = false;
+        //     } else {
+        //         lights = true;
+        //     }
+        // }
+        // console.log("The lights are " + lights);
+        // lightsOn()
+        // console.log("The lights are " + lights);
+        // console.log("The lights are " + lights);
+        // lightsOn()
+        // console.log("The lights are " + lights);console.log("The lights are " + lights);
+        // lightsOn()
+        // console.log("The lights are " + lights);
+
+        //June 22nd
+        // function magicBall(number) {
+        //     switch(number) {
+        //         case 1:
+        //             return ("As I see it, yes")
+        //         case 2:
+        //             return ("Ask again later")
+        //         case 3:
+        //             return ("Better not tell you now")
+        //         case 4:
+        //             return ("Cannot predict now")
+        //         case 5:
+        //             return ("Concentrate and ask again")
+        //         case 6:
+        //             return ("Don't count on it")
+        //         case 7:
+        //             return ("Outlook not so good")
+        //         case 8:
+        //             return ("Outlook good")
+        //     }
+        // }
+        // magicBall(3);
 
         //June 19th 2020
         //Write a function that takes 2 parameters. Starting at the first and counting by the second, will output 5 steps. I.e. countFromBy(10,5) results in:
