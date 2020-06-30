@@ -6,17 +6,31 @@
 </head>
 <body>
     <script>
-        let lights = "true"
-        let lightsOn = function() {
-            lights = !lights;
+        let evenOrOdd = function () {
+        let i = 1
+            while (i <= 10) {
+                if (i % 2 === 0) {
+                    console.log(i + " is even")
+                    i++
+                } else {
+                    console.log(i + " is odd")
+                    i++
+                }
+            }
         }
-        console.log("The lights are " + lights);
-        lightsOn()
-        console.log("The lights are " + lights);
-        lightsOn()
-        console.log("The lights are " + lights);
-        lightsOn()
-        console.log("The lights are " + lights);
+        evenOrOdd()
+
+        // let lights = "true"
+        // let lightsOn = function() {
+        //     lights = !lights;
+        // }
+        // console.log("The lights are " + lights);
+        // lightsOn()
+        // console.log("The lights are " + lights);
+        // lightsOn()
+        // console.log("The lights are " + lights);
+        // lightsOn()
+        // console.log("The lights are " + lights);
         //
         // let lightsOn = function() {
         //     if (lights) {
