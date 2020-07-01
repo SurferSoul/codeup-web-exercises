@@ -77,8 +77,7 @@ console.log(isTwo(random));
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 function sum(tip, total) {
-    let myTotal = ((tip/100) * total);
-    return myTotal;
+    return ((tip / 100) * total);
 }
 let tip;
 let total;
@@ -116,7 +115,6 @@ calculateTip();
 function applyDiscount(originalPrice, discountPercent) {
     let price = 200;
     let discount = .2;
-    let totalPrice = price - (price * discount) ;
-    return totalPrice;
+    return price - (price * discount);
 }
 console.log(applyDiscount(10, .20));
