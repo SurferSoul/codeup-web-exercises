@@ -6,19 +6,31 @@
 </head>
 <body>
     <script>
-        let evenOrOdd = function () {
+
+        function doubleChar(str) {
+            let repeatedString = "";
+            for (let i = 0; i < str.length; i++) {
+                repeatedString = repeatedString + str[i] + str[i];
+                console.log(repeatedString)
+            }
+            console.log(repeatedString)
+            return repeatedString;
+        }
+doubleChar()
+
+
+       /* let evenOrOdd = function () {
         let i = 1
             while (i <= 10) {
                 if (i % 2 === 0) {
                     console.log(i + " is even")
-                    i++
                 } else {
                     console.log(i + " is odd")
-                    i++
                 }
+                i ++
             }
         }
-        evenOrOdd()
+        evenOrOdd()*/
 
         // let lights = "true"
         // let lightsOn = function() {
