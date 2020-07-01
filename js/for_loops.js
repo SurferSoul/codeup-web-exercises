@@ -1,25 +1,25 @@
 "use strict"
 
-// let showMultiplicationTable = function (number) {
-//     for (let i = 1; i <= 10; i++ ) {
-//         console.log(number + " x " + i + " = " + (number * i));
-//     }
-// }
-// showMultiplicationTable(2);
+let showMultiplicationTable = function (number) {
+    for (let i = 1; i <= 10; i++ ) {
+        console.log(number + " x " + i + " = " + (number * i));
+    }
+}
+showMultiplicationTable(2);
 
 //Use a for loop and the code from the previous lessons to generate 10 random numbers between 20 and 200 and output
 // to the console whether each number is odd or even. For example:
 
 
 
-// for (let i = 1; i <= 10; i++) {
-//     let random = Math.floor(Math.random() * 200) + 20;
-//     if (random % 2 === 0) {
-//         console.log(random + " is an even number")
-//     } else {
-//         console.log(random + " is an odd number")
-//     }
-// }
+for (let i = 1; i <= 10; i++) {
+    let random = Math.floor(Math.random() * 180) + 20;
+    if (random % 2 === 0) {
+        console.log(random + " is an even number")
+    } else {
+        console.log(random + " is an odd number")
+    }
+}
 
 //Create a for loop that uses console.log to create the output shown below.
 //
@@ -55,16 +55,16 @@ let growingByOne = function () {
             console.log(i, i, i, i, i, i);
         }
         if (i === 7) {
-            console.log(i, i, i, i, i, i);
-        }
-        if (i === 8) {
             console.log(i, i, i, i, i, i, i);
         }
-        if (i === 9) {
+        if (i === 8) {
             console.log(i, i, i, i, i, i, i, i);
         }
-        if (i === 10) {
+        if (i === 9) {
             console.log(i, i, i, i, i, i, i, i, i);
+        }
+        if (i === 10) {
+            console.log(i, i, i, i, i, i, i, i, i, i);
         }
     }
 }
