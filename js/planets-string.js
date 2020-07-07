@@ -23,9 +23,15 @@
     //Bonus
     let i = 0;
     while (i < planetsArray.length) {
-        console.log("<ul>" + planetsArray.join("<li>") + "</ul>" );
+        console.log("<ul><li>" + planetsArray.join("</li><li>") + "</li></ul>" );
         i++;
     }
+
+
+    let planetsNewNew = "<ul><li>" +
+        planetsArray.join("</li><li>") +
+        "</li></ul>";
+    console.log(planetsNewNew)
 
      /*
      * BONUS:
@@ -33,7 +39,5 @@
      * list. You will need an opening AND closing <ul> tags around the entire
      * string, and <li> tags around each planet.
      */
-
-
 
 })();
