@@ -1,5 +1,5 @@
 "use strict"
-let doubleNumber = 2
+let doubleNumber = 1
 while(doubleNumber <= 16) {
     console.log(Math.pow(2,doubleNumber))
     doubleNumber++;
@@ -19,13 +19,13 @@ do {
     // This expression will generate a random number between 1 and 5
     let sold = Math.floor(Math.random() * 5) + 1;
     if (sold > allCones) {
-        console.log("Ooops...I can't sell you " + sold + " because I have " + allCones + " left");
+        console.log("Oops...I can't sell you " + sold + " because I only have " + allCones + " left");
     } else {
         allCones = allCones - sold;
         console.log("I just sold " + sold + " cones! " + allCones + " more to go!");
     }
 } while (allCones > 0) {
-        console.log("We sold everything")
+        console.log("We sold everything!!!")
     }
 
 
