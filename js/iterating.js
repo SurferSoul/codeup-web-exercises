@@ -70,6 +70,10 @@ for(let i = 0; i<1; i++) {
     console.log("The first element is: " + second(element));
     console.log("The first element is: " + last(element));
 
+    let val = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+    console.log(val.length)
+    val.unshift("sunday");
+    val.push("Saturday")
 
 
 
