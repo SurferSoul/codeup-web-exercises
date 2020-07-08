@@ -1,5 +1,4 @@
-
-(function() {
+(function () {
     "use strict";
 
     /**
@@ -55,17 +54,17 @@
         {name: 'George', amount: 320}
     ];
 
-    shoppers.forEach(function(buyer) {
+    shoppers.forEach(function (buyer) {
         let discount = .12;
         let totalPrice = (buyer.amount - (buyer.amount * discount));
         let saved = buyer.amount - totalPrice;
 
-    if (buyer.amount > 200) {
-        console.log(buyer.name + ", you've got a discount! The total price is $" + buyer.amount.toFixed(2) + ", your" +
-            " total with discount is" + " $" + totalPrice.toFixed(2) + "." + " You saved $" + saved.toFixed(2));
-    } else {
-        console.log( buyer.name + ", your total is $" +  buyer.amount.toFixed(2) + ", you didn't get a discount.");
-    }
+        if (buyer.amount > 200) {
+            console.log(buyer.name + ", you've got a discount! The total price is $" + buyer.amount.toFixed(2) + ", your" +
+                " total with discount is" + " $" + totalPrice.toFixed(2) + "." + " You saved $" + saved.toFixed(2));
+        } else {
+            console.log(buyer.name + ", your total is $" + buyer.amount.toFixed(2) + ", you didn't get a discount.");
+        }
 
     });
 
@@ -149,10 +148,9 @@
      */
 // I can do this with multiple console.logs
     books.forEach(function (bookInfo) {
-        console.log("Book # " + (books.indexOf(bookInfo)+1) + "\n"  + "Title: " + bookInfo.title + "\n" +  "Author: "
-            +(bookInfo.author.firstName + " " +  bookInfo.author.lastName) + "\n" + "---");
+        console.log("Book # " + (books.indexOf(bookInfo) + 1) + "\n" + "Title: " + bookInfo.title + "\n" + "Author: "
+            + (bookInfo.author.firstName + " " + bookInfo.author.lastName) + "\n" + "---");
     })
-
 
 
     /**
@@ -169,7 +167,7 @@
     let createBook = function (title, firstName, lastName) {
         let book = {};
         book.title = title;
-        book.author ={};
+        book.author = {};
         book.author.firstName = firstName;
         book.author.lastName = lastName;
         return book;
