@@ -2,25 +2,31 @@
     "use strict";
 
     // create a circle object
+
     var circle = {
         radius: 3,
 
-        getArea: function () {
+        getArea: function (area) {
             // TODO: complete this method
             // hint: area = pi * radius^2
-
-            return; // TODO: return the proper value
+            return (this.radius * this.radius) * Math.PI; // TODO: return the proper value
         },
+
 
         logInfo: function (doRounding) {
             // TODO: complete this method.
-
+          this.logInfo = Math.round(this.getArea());
             // If doRounding is true, round the result to the nearest integer.
             // Otherwise, output the complete value
+            if (this.getArea() % 2 === 1 ) {
+                return this.logInfo;
+            }
 
-            console.log("Area of a circle with radius: " + this.radius + ", is: ");
+
+            console.log("Area of a circle with radius: " + this.radius + ", is: " + this.getArea());
         }
     };
+
 
     // log info about the circle
     console.log("Raw circle information");
