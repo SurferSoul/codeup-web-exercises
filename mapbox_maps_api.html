@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Mapbox Map</title>
+    <!-- Mapbox CSS -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet'/>
+    <!-- Custom CSS -->
+   <style>
+       #map {
+           /* the width and height may be set to any size */
+           width: 100%;
+           height: 700px;
+           border: 3px solid gray;
+       }
+
+       body {
+           background-color: cadetblue;
+       }
+
+   </style>
+</head>
+<body>
+
+<h1>My Mapbox Map</h1>
+<button id="btn1">Zoom 5x</button>
+<button id="btn2">Zoom 10x</button>
+<button id="btn3">Zoom 15x</button>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<!-- Mapbox JS -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+
+<!-- Custom JS -->
+<script>
+    mapboxgl.accessToken = mapboxKey;
+    let map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 9,
+        center: [-66.10722, 18.42379],
+    });
+
+    // let zoom = map.setZoom(10);
+    // document.getElementById("btn1").addEventListener("click",zoom)
+
+    // create a handler function
+    var zoomFivex = function (event) {
+        map.setZoom(5);
+    }
+    // register the listener to handle clicks on btn1
+    document.getElementById('btn1').addEventListener('click', zoomFivex);
+
+    var zoomTenx = function (event) {
+        map.setZoom(10);
+    }
+    // register the listener to handle clicks on btn1
+    document.getElementById('btn2').addEventListener('click', zoomTenx);
+
+    var zoomFifthteenx = function (event) {
+        map.setZoom(15);
+    }
+    // register the listener to handle clicks on btn1
+    document.getElementById('btn3').addEventListener('click', zoomFifthteenx);
+
+
+
+    /*Geocode*/
+    function geocode(search, token) {
+        var baseUrl = 'https://api.mapbox.com';
+        var endPoint = '/geocoding/v5/mapbox.places/';
+        return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+            .then(function(res) {
+                return res.json();
+                // to get all the data from the request, comment out the following three lines...
+            }).then(function(data) {
+                return data.features[0].center;
+            });
+    }
+   //  geocode("1966 Calle McLeary, San Juan, PR 00911", mapboxKey).then(function(data) {
+   //      console.log(data);
+   //
+   //      let kasalta = new mapboxgl.Marker().setLngLat(data).addTo(map);
+   //
+   //      var KasaltaPop = new mapboxgl.Popup()
+   //          .setHTML("<h4>Kasalta</h4>")
+   //          .addTo(map);
+   //
+   //      kasalta.setPopup(KasaltaPop)
+   //  });
+   //
+   //   geocode("Calle Manuel Enrique #39, Palo Seco Toa Baja 00949", mapboxKey).then(function(data) {
+   //      console.log(data);
+   //      let laGuarida = new mapboxgl.Marker().setLngLat(data).addTo(map);
+   //
+   //      var laGuaridaPop = new mapboxgl.Popup()
+   //          .setHTML("<h4>La Guarida del Pirata</h4>")
+   //          .addTo(map);
+   //
+   //      laGuarida.setPopup(laGuaridaPop);
+   //  });
+   //
+   // geocode("79 Av. Isla Verde, Carolina, 00979, Puerto Rico", mapboxKey).then(function(data) {
+   //      console.log(data);
+   //     let cevicheHouse = new mapboxgl.Marker().setLngLat(data).addTo(map);
+   //
+   //     var cevicheHousePop = new mapboxgl.Popup()
+   //         .setHTML("<h4>El Ceviche House</h4>")
+   //         .addTo(map);
+   //
+   //     cevicheHouse.setPopup(cevicheHousePop);
+   //
+   //    document.addEventListener("keyup", function(e) {
+   //        if (e.key === " ") {
+   //            let rrMark = new mapboxgl.Popup()
+   //        }
+   //    });
+   //
+   // });
+
+
+
+   let restaurants = [
+       {
+       name: "Kasalta",
+       address: "1966 Calle McLeary, San Juan, PR 00911",
+        },
+       {
+       name: "La Guarida Del Pirata",
+       address: "Calle Manuel Enrique #39, Palo Seco Toa Baja 00949",
+         },
+       {
+       name: "El Ceviche House",
+        address: "79 Av. Isla Verde, Carolina, 00979, Puerto Rico"
+         }
+   ];
+
+        restaurants.forEach(function (restaurant) {
+            geocode(restaurant.address, mapboxKey).then(function (data) {
+                console.log(data);
+
+                let markers = new mapboxgl.Marker().setLngLat(data).addTo(map);
+
+                var KasaltaPop = new mapboxgl.Popup()
+                    .setHTML("<h4>Kasalta</h4>")
+                    .addTo(map);
+
+                markers.setPopup(KasaltaPop)
+
+                geocode(restaurants[1].address, mapboxKey).then(function (data) {
+                    let laGuarida = new mapboxgl.Marker().setLngLat(data).addTo(map);
+                    var laGuaridaPop = new mapboxgl.Popup()
+                        .setHTML("<h4>La Guarida del Pirata</h4>")
+                        .addTo(map);
+
+                         laGuarida.setPopup(laGuaridaPop);
+
+                    geocode(restaurants[2].address, mapboxKey).then(function (data) {
+                        let cevicheHouse = new mapboxgl.Marker().setLngLat(data).addTo(map);
+                        var cevicheHousePop = new mapboxgl.Popup()
+                            .setHTML("<h4>El Ceviche House</h4>")
+                            .addTo(map);
+
+                        cevicheHouse.setPopup(cevicheHousePop);
+
+                    });
+
+                });
+            });
+        });
+
+
+
+</script>
+</body>
+</html>
